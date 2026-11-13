@@ -363,36 +363,81 @@
     <div class="modal" id="modalUsuario"><div class="modal-conteudo"><span class="fechar-modal" onclick="fecharModalUsuario()">&times;</span><div id="areaLogin"><h2 style="margin-bottom: 20px;">Acesse sua conta</h2><input type="text" id="nomeUsuario" placeholder="Nome ou Apelido" style="width:100%; padding:10px; margin-bottom:15px;"><button class="btn-comprar" onclick="fazerLogin()">Entrar</button></div><div id="areaLogada" style="display: none;"><h2 id="mensagemBoasVindas" style="color: var(--cor-destaque); margin-bottom: 15px;"></h2><div class="user-tabs"><button class="btn-tab ativo" onclick="mudarAbaUsuario('perfil', this)">Meu Perfil</button><button class="btn-tab" onclick="mudarAbaUsuario('pedidos', this)">Histórico</button></div><div id="tab-perfil" class="tab-content ativo"><div class="perfil-form" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; margin-bottom: 20px;"><p><strong>Nome:</strong> <span id="perfilNome" style="color:var(--cor-destaque); font-weight:bold;"></span></p><p><strong>E-mail:</strong> <input type="email" id="perfilEmail" placeholder="Adicionar e-mail..."></p><p><strong>Endereço:</strong> <input type="text" id="perfilEnd" placeholder="Endereço..."></p><button class="btn-comprar" style="margin-top: 15px; padding: 10px; width:auto;" onclick="salvarPerfil()">💾 Salvar Dados</button></div></div><div id="tab-pedidos" class="tab-content"><div id="listaHistoricoPedidos" style="max-height: 280px; overflow-y: auto; padding-right:10px;"></div></div><button class="btn-comprar" style="background: #d32f2f; color: #fff; margin-top: 10px;" onclick="fazerLogout()">Sair</button></div></div></div>
 
     <script>
-        // =========================================================================
+      // =========================================================================
         // ✏️ ÁREA EDITÁVEL: CONFIGURAÇÃO DOS PRODUTOS & IMAGENS
         // =========================================================================
         const produtos = [
             {
                 id: 1,
-                nome: "Camiseta Onça - Edição Especial", 
+                nome: "Camiseta Onça - busco aprovação", 
                 preco: 69.90,                            
                 desc: "A força da natureza no seu dia a dia. Camiseta 100% algodão com estampa exclusiva da parceria Out Looks e Eu Busco Aprovação.", 
-                img: "imagem onça.png",                // <-- ADICIONE O NOME DA IMAGEM DA ONÇA AQUI
+                img: "busco-aprovação.png", // <-- Nome da 1ª imagem
                 isCollab: true,
                 comentarios: [ { autor: "Carlos S.", texto: "O caimento dessa camisa da onça é absurdo! A estampa tem muita qualidade." } ]
             },
             {
                 id: 2,
-                nome: "Camiseta Lobo Guará",             
+                nome: "Camiseta Lobo",             
                 preco: 64.90,                            
                 desc: "Design minimalista e elegante. Leve a fauna brasileira com você em uma modelagem premium e estampa duradoura.", 
-                img: "lobao.png",                   // <-- ADICIONE O NOME DA IMAGEM DO LOBO AQUI
-                isCollab: true,
+                img: "lobao.png", // <-- Nome da 2ª imagem
+                isCollab: false,
                 comentarios: [ { autor: "Mariana P.", texto: "Adorei a pegada sustentável! Muito confortável." } ]
             },
             {
                 id: 3,
-                nome: "Camiseta Oversized - Raízes Urbanas", 
+                nome: "Camiseta Raízes Urbanas", 
                 preco: 89.90,                                
                 desc: "Mais que estilo, uma visão. A Camiseta Oversized Out Looks traz um design exclusivo em alta definição nas costas onde a cidade e a natureza se fundem.", 
-                img: "imagen raiz.png",                           // <-- ADICIONE O NOME DA IMAGEM (ex: clip_2.png) AQUI
-                isCollab: true,
+                img: "imagen-raiz.png", // <-- Nome da 3ª imagem
+                isCollab: false,
                 comentarios: [ { autor: "Lucas M.", texto: "A modelagem oversized é perfeita. A arte chama muita atenção!" } ]
+            },
+            {
+                id: 4,
+                nome: "Camiseta Águia", 
+                preco: 79.90,                                
+                desc: "Cores vibrantes que representam a liberdade. Peça exclusiva em malha sustentável.", 
+                img: "aguia.png", // <-- Nome da 4ª imagem
+                isCollab: false,
+                comentarios: []
+            },
+            {
+                id: 5,
+                nome: "Camiseta Padrão", 
+                preco: 69.90,                                
+                desc: "Modelagem confortável para os estudos e para a vida.", 
+                img: "padrão.png", // <-- Nome da 5ª imagem
+                isCollab: false,
+                comentarios: []
+            },
+            {
+                id: 6,
+                nome: "Camiseta Padrão CLRS", 
+                preco: 69,90,                                
+                desc: "Modelagem confortável para os estudos e para a vida.", 
+                img: "padrao-branco.png", // <-- Nome da 6ª imagem
+                isCollab: false,
+                comentarios: []
+            },
+            {
+                id: 7,
+                nome: "Camiseta Padrão CLRS2", 
+                preco: 69,90                                
+                desc: "Modelagem confortável para os estudos e para a vida.", 
+                img: "padrao-preto.png", // <-- Nome da 7ª imagem
+                isCollab: false,
+                comentarios: []
+            },
+            {
+                id: 8,
+                nome: "Camiseta Foco & Natureza (Collab)", 
+                preco: 69.90,                                
+                desc: "O equilíbrio perfeito entre buscar seus objetivos e manter as raízes. Coleção oficial Out Looks + Eu Busco Aprovação.", 
+                img: "foco.jpg", // <-- Nome da 8ª imagem
+                isCollab: true,
+                comentarios: []
             }
         ];
         // =========================================================================
