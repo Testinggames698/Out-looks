@@ -630,6 +630,15 @@
                 img: "Classic-branco.png",
                 isCollab: false,
                 comentarios: []
+            },
+             {
+                id: 10,
+                nome: "Camiseta Classic Branco",
+                preco: 69.90,
+                desc: "O equilíbrio perfeito entre refresco e estilo.",
+                img: "Classic-branco.png",
+                isCollab: false,
+                comentarios: []
             }
         ];
         // =========================================================================
@@ -776,7 +785,7 @@
                 descontoAplicado = 10;
                 codigoCupomAtivo = code;
                 msgEl.style.color = '#8db580';
-                msgEl.innerText = '✅ Cupom OUTLOOKS10 aplicado (10% OFF)!';
+                msgEl.innerText = '✅ Cupom OUTLOOKS10 aplicado (05% OFF)!';
             } else if(code === 'NATUREZA15') {
                 if(subtotal >= 120) {
                     descontoAplicado = 15;
@@ -787,7 +796,7 @@
                     descontoAplicado = 0;
                     codigoCupomAtivo = "";
                     msgEl.style.color = '#ff6b6b';
-                    msgEl.innerText = '⚠️ O cupom NATUREZA15 exige compras a partir de R$ 120,00.';
+                    msgEl.innerText = '⚠️ O cupom NATUREZA15 exige compras a partir de R$ 350,00.';
                 }
             } else {
                 descontoAplicado = 0;
