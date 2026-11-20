@@ -533,16 +533,16 @@
                 <div class="flex flex-wrap items-center gap-6 text-sm font-medium text-carvao/85">
                     <a id="linkContatoFooter" href="mailto:contato@outlooksroupas.com.br" class="hover:text-laranja transition-colors">Contato</a>
                     <button onclick="abrirModalTrocas()" class="hover:text-laranja transition-colors">Trocas e devoluções</button>
-                    <a id="linkInstagramFooter" href="https://instagram.com/sua_loja" target="_blank" rel="noopener" class="hover:text-laranja transition-colors">Instagram</a>
+                    <a id="linkInstagramFooter" href="instagram.com/outlooks.ofc?xtok=Y2o1dGV2cTNva3QO&utm_source=qr" target="_blank" rel="noopener" class="hover:text-laranja transition-colors">Instagram</a>
                     <a id="linkTiktokFooter" href="https://tiktok.com/@sua_loja" target="_blank" rel="noopener" class="hover:text-laranja transition-colors">TikTok</a>
-                    <a id="linkWhatsappFooter" href="https://wa.me/5541999999999" target="_blank" rel="noopener" class="hover:text-laranja transition-colors">WhatsApp</a>
+                    <a id="linkWhatsappFooter" href="https://wa.me/5541996334027" target="_blank" rel="noopener" class="hover:text-laranja transition-colors">WhatsApp</a>
                 </div>
             </div>
 
             <!-- Dados Legais da Empresa (Preenchidos via CONFIG_LOJA) -->
             <div class="mt-8 pt-6 border-t border-black/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-carvao/65">
                 <p>
-                    <strong id="empresaRazaoSocial">OutLooks Vestuário Sustentável LTDA</strong> • CNPJ: <span id="empresaCnpj">00.000.000/0001-00</span> • E-mail: <span id="empresaEmail">contato@outlooksroupas.com.br</span>
+                    <strong id="empresaRazaoSocial">OutLooks Vestuário Sustentável LTDA</strong> • CNPJ: <span id="empresaCnpj">186-439-786/0078-89</span> • E-mail: <span id="empresaEmail">roupasoutlooks@gmail.com</span>
                 </p>
                 <p>© 2026 OutLooks. Todos os direitos reservados.</p>
             </div>
@@ -825,11 +825,11 @@
         // =========================================================================
         const CONFIG_LOJA = {
             razaoSocial: "OutLooks Vestuário Sustentável LTDA",
-            cnpj: "00.000.000/0001-00",
-            email: "contato@outlooksroupas.com.br",
-            instagram: "https://instagram.com/sua_loja",
+            cnpj: "186-439-786/0078-89",
+            email: "roupasoutlooks@gmail.com",
+            instagram: "instagram.com/outlooks.ofc?xtok=Y2o1dGV2cTNva3QO&utm_source=qr",
             tiktok: "https://tiktok.com/@sua_loja",
-            whatsapp: "https://wa.me/5541999999999"
+            whatsapp: "https://wa.me/5541996334027"
         };
 
         // =========================================================================
@@ -883,11 +883,29 @@
             {
                 id: 7,
                 colecao: "classic",
-                nome: "Camiseta Essential Preta",
+                nome: "Camiseta Classic cinza",
                 preco: 69.90,
-                desc: "Versatilidade máxima no preto profundo com assinatura frontal OutLOOKS e selo autoral na barra.",
-                imgFrente: "padrao-preto.png",           // <-- IMAGEM FRENTE (Classic 3)
-                imgVerso: "padrao-preto-verso.png",      // <-- IMAGEM VERSO  (Classic 3)
+                desc: "Minimalismo em detalhes, máximo esforço em qualidade.",
+                imgFrente: "parte da frente da camiseta classic cinza.jpeg",           // <-- IMAGEM FRENTE (Classic 3)
+                imgVerso: "parte de tras da camiseta classic cinza.jpeg",      // <-- IMAGEM VERSO  (Classic 3)
+                som: "trilha-preta.mp3",                 // <-- ÁUDIO TRILHA  (Classic 3)
+                nomeTrilha: "Noturno Urbano",
+                tomSintetizador: [146.83, 174.61, 220],
+                corBase: "#1c1c1a",
+                cores: [
+                    { nome: "Preto Intenso", hex: "#1c1c1a" },
+                    { nome: "Cinza Neblina", hex: "#b8b8b4" }
+                ],
+                comentarios: []
+            },
+               {
+                id: 8,
+                colecao: "classic",
+                nome: "Camiseta Classic Red",
+                preco: 69.90,
+                desc: "Minimalismo em detalhes, máximo esforço em qualidade.",
+                imgFrente: "parte da frente da camiseta classic red.jpeg",           // <-- IMAGEM FRENTE (Classic 3)
+                imgVerso: "parte de trasvcamiseta classic red.jpeg",      // <-- IMAGEM VERSO  (Classic 3)
                 som: "trilha-preta.mp3",                 // <-- ÁUDIO TRILHA  (Classic 3)
                 nomeTrilha: "Noturno Urbano",
                 tomSintetizador: [146.83, 174.61, 220],
@@ -908,8 +926,8 @@
                 nome: "Camiseta Onça - Busco Aprovação",
                 preco: 69.90,
                 desc: "A força da onça-pintada no seu dia a dia. Malha 100% algodão sustentado com estampa exclusiva da parceria OutLooks e Eu Busco Aprovação.",
-                imgFrente: "busco-aprovacao-frente.png", // <-- IMAGEM FRENTE (Collab 1)
-                imgVerso: "busco-aprovacao.png",         // <-- IMAGEM VERSO  (Collab 1)
+                imgFrente: "parte da frente da camiseta collab aprovação.jpeg", // <-- IMAGEM FRENTE (Collab 1)
+                imgVerso: "parte de tras da camiseta collab aprovação.jpeg ",         // <-- IMAGEM VERSO  (Collab 1)
                 som: "trilha-onca.mp3",                  // <-- ÁUDIO TRILHA  (Collab 1)
                 nomeTrilha: "Mata Atlântica & Foco",
                 tomSintetizador: [220, 277.18, 329.63],
@@ -923,13 +941,13 @@
                 ]
             },
             {
-                id: 8,
+                id: 2,
                 colecao: "collab",
-                nome: "Camiseta Tigre Selvagem Collab",
+                nome: "Camiseta Aprendizado Collab",
                 preco: 79.90,
-                desc: "Edição especial Collab Eu Busco Aprovação. Frente limpa com logo OutLOOKS e arte monumental do Tigre sob tempestade nas costas.",
-                imgFrente: "imagem-tigre-frente.png",    // <-- IMAGEM FRENTE (Collab 2)
-                imgVerso: "imagem-tigre.png",            // <-- IMAGEM VERSO  (Collab 2)
+                desc: "Edição especial Collab Senac, para avançar os estudos com estilo e conforto.",
+                imgFrente: "parte da frente da camiseta collab senac.jpeg",    // <-- IMAGEM FRENTE (Collab 2)
+                imgVerso: "parte de tras da camiseta collab senac.jpeg",            // <-- IMAGEM VERSO  (Collab 2)
                 som: "trilha-tigre.mp3",                 // <-- ÁUDIO TRILHA  (Collab 2)
                 nomeTrilha: "Tempestade & Trovão",
                 tomSintetizador: [130.81, 196.00, 246.94],
@@ -947,14 +965,14 @@
             // 3. COLEÇÃO NATURE (colecao: 'nature')
             // ---------------------------------------------------------------------
             {
-                id: 2,
+                id: 3,
                 colecao: "nature",
                 nome: "Camiseta Lobo Aurora",
                 preco: 64.90,
                 desc: "Instinto que guia além do horizonte. Lavagem estonada premium com arte exclusiva nas costas inspirada na fauna silvestre sob luzes boreais.",
-                imgFrente: "lobao-frente.png",           // <-- IMAGEM FRENTE (Nature 1)
-                imgVerso: "lobao.png",                   // <-- IMAGEM VERSO  (Nature 1)
-                som: "trilha-lobo.mp3",                  // <-- ÁUDIO TRILHA  (Nature 1)
+                imgFrente: "parte da frente da camiseta do lobo.jpep",           // <-- IMAGEM FRENTE (Nature 1)
+                imgVerso: "parte de tras da camiseta do lobo.jpeg",                   // <-- IMAGEM VERSO  (Nature 1)
+                som: "som de lobo uivando.mp3",                  // <-- ÁUDIO TRILHA  (Nature 1)
                 nomeTrilha: "Vento Norte & Aurora",
                 tomSintetizador: [196, 246.94, 293.66],
                 corBase: "#3d3d3b",
@@ -967,13 +985,13 @@
                 ]
             },
             {
-                id: 3,
+                id: 4,
                 colecao: "nature",
                 nome: "Camiseta Raízes Urbanas",
                 preco: 89.90,
                 desc: "More than a look. A mindset. Modelagem oversized ampla onde a arquitetura urbana e as raízes da floresta se fundem em alta definição.",
-                imgFrente: "imagen-raiz-frente.png",     // <-- IMAGEM FRENTE (Nature 2)
-                imgVerso: "imagen-raiz.png",             // <-- IMAGEM VERSO  (Nature 2)
+                imgFrente: "parte da frente da camiseta raizes.jpeg",     // <-- IMAGEM FRENTE (Nature 2)
+                imgVerso: "imagen",             // <-- IMAGEM VERSO  (Nature 2)
                 som: "trilha-raizes.mp3",                // <-- ÁUDIO TRILHA  (Nature 2)
                 nomeTrilha: "Pulso Urbano & Floresta",
                 tomSintetizador: [174.61, 220, 261.63],
@@ -987,7 +1005,7 @@
                 ]
             },
             {
-                id: 4,
+                id: 5,
                 colecao: "nature",
                 nome: "Camiseta Águia",
                 preco: 79.90,
