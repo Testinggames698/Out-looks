@@ -361,9 +361,9 @@
             </button>
             <div class="bg-pedra rounded-2xl p-8 sm:p-12 border border-black/5">
                 <span class="text-xs font-bold uppercase tracking-widest text-laranja">Manifesto OutLooks</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-carvao mt-2 mb-5">More than a look. A mindset.</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-carvao mt-2 mb-5">Conforto com a Natureza.</h2>
                 <p class="text-carvao/80 leading-relaxed text-base sm:text-lg mb-4">
-                    A <strong>OutLooks</strong> nasceu da conexão entre o streetwear contemporâneo e a força da fauna e flora brasileiras. Cada peça é produzida em algodão sustentável de alta gramatura, com modelagem oversized confortável e estampas autorais que carregam identidade.
+                    A <strong>OutLooks</strong> nasceu da conexão entre o vestúario de roupas existentes e a força da fauna e flora brasileiras. Cada peça é produzida em algodão sustentável de alta gramatura, com modelagem oversized confortável e estampas autorais que carregam identidade.
                 </p>
                 <p class="text-carvao/80 leading-relaxed text-base sm:text-lg mb-8">
                     Em parceria especial com o projeto <strong>Eu Busco Aprovação</strong>, criamos uma linha dedicada a quem transforma disciplina e natureza em estilo de vida.
@@ -845,7 +845,7 @@
             // 1. COLEÇÃO CLASSIC (colecao: 'classic')
             // ---------------------------------------------------------------------
             {
-                id: 5,
+                id: 1,
                 colecao: "classic",
                 nome: "Camiseta Classic Black",
                 preco: 69.90,
@@ -863,7 +863,7 @@
                 comentarios: []
             },
             {
-                id: 6,
+                id: 2,
                 colecao: "classic",
                 nome: "Camiseta Classic Branca",
                 preco: 69.90,
@@ -881,7 +881,7 @@
                 comentarios: []
             },
             {
-                id: 7,
+                id: 3,
                 colecao: "classic",
                 nome: "Camiseta Classic cinza",
                 preco: 69.90,
@@ -899,7 +899,7 @@
                 comentarios: []
             },
                {
-                id: 8,
+                id: 4,
                 colecao: "classic",
                 nome: "Camiseta Classic Red",
                 preco: 69.90,
@@ -921,7 +921,7 @@
             // 2. COLEÇÃO COLLAB - EU BUSCO APROVAÇÃO (colecao: 'collab')
             // ---------------------------------------------------------------------
             {
-                id: 1,
+                id: 5,
                 colecao: "collab",
                 nome: "Camiseta Onça - Busco Aprovação",
                 preco: 69.90,
@@ -941,7 +941,7 @@
                 ]
             },
             {
-                id: 2,
+                id: 6,
                 colecao: "collab",
                 nome: "Camiseta Aprendizado Collab",
                 preco: 79.90,
@@ -965,7 +965,7 @@
             // 3. COLEÇÃO NATURE (colecao: 'nature')
             // ---------------------------------------------------------------------
             {
-                id: 3,
+                id: 7,
                 colecao: "nature",
                 nome: "Camiseta Lobo Aurora",
                 preco: 64.90,
@@ -985,7 +985,7 @@
                 ]
             },
             {
-                id: 4,
+                id: 8,
                 colecao: "nature",
                 nome: "Camiseta Raízes Urbanas",
                 preco: 89.90,
@@ -1005,14 +1005,32 @@
                 ]
             },
             {
-                id: 5,
+                id: 9,
                 colecao: "nature",
                 nome: "Camiseta Águia",
                 preco: 79.90,
                 desc: "Visão elevada e liberdade. Estampa de alto contraste desenvolvida com tintas ecológicas à base de água.",
-                imgFrente: "aguia-frent.png",           // <-- IMAGEM FRENTE (Nature 3)
-                imgVerso: "aguia.png",                   // <-- IMAGEM VERSO  (Nature 3)
-                som: "trilha-aguia.mp3",                 // <-- ÁUDIO TRILHA  (Nature 3)
+                imgFrente: "parte da frente da camiseta aguia.jpeg",           // <-- IMAGEM FRENTE (Nature 3)
+                imgVerso: "parte de tras da camiseta aguia.jpeg",                   // <-- IMAGEM VERSO  (Nature 3)
+                som: "som de aguia.mp3",                 // <-- ÁUDIO TRILHA  (Nature 3)
+                nomeTrilha: "Horizonte & Altitude",
+                tomSintetizador: [246.94, 293.66, 369.99],
+                corBase: "#3d3d3b",
+                cores: [
+                    { nome: "Carvão Estonado", hex: "#3d3d3b" },
+                    { nome: "Off-White", hex: "#f2efe9" }
+                ],
+                comentarios: []
+            }
+             {
+                id: 10,
+                colecao: "nature",
+                nome: "Camiseta Tigre",
+                preco: 79.90,
+                desc: "Audácia e força como um tigre em meio a caçada.",
+                imgFrente: "parte da frente da camiseta tigre.jpeg",           // <-- IMAGEM FRENTE (Nature 3)
+                imgVerso: "parte de tras da camiseta tigre.jpeg",                   // <-- IMAGEM VERSO  (Nature 3)
+                som: "som de tigre.mp3",                 // <-- ÁUDIO TRILHA  (Nature 3)
                 nomeTrilha: "Horizonte & Altitude",
                 tomSintetizador: [246.94, 293.66, 369.99],
                 corBase: "#3d3d3b",
@@ -1023,6 +1041,8 @@
                 comentarios: []
             }
         ];
+
+        
 
         function carregarDadosRodape() {
             document.getElementById('empresaRazaoSocial').innerText = CONFIG_LOJA.razaoSocial;
